@@ -38,4 +38,12 @@ public class CustomListTest {
         list.removeCity(city1);
         assertEquals(0,list.hasCity(city1));
     }
+
+    @Test
+    public void countCity(){
+        CustomList list1 = new CustomList(null,new ArrayList<City>());;
+        assertEquals(0,list1.countCity());
+        list1.addCity(new City("T1","T2"));
+        assertEquals(1,list1.countCity());
+    }
 }
